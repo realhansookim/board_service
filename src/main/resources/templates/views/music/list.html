@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body> <section>
+  <header>
+      <center>
+          <a href="/">
+              <img src="https://resources.chimhaha.net/assets/1668258070647-hf2l6s4c2j.svg?v=1679679048000" width="200" height="80" alt="침하하">
+          </a>
+      </center>
+  </header>
+</section>
+<hr>
+  <h1> 🎵 음악이필요한 순간</h1>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>글 내용</td>
+        <td>등록일</td>
+        <td>사진</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="music : ${result.list}">
+        <td th:text="${music.bmiSeq}"></td>
+        <td th:text="${music.bmiTitle}"></td>
+        <td th:text="${music.bmiContent}"></td>
+        <td th:text="${music.bmiRegDt}"></td>
+        <td th:text="${music.bmiImg}"></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <hr>
+  <footer>
+    <center>
+        <small> Copyrightⓒ게시판 All right reserved. </small> 
+    </center>
+  </footer>
+</body>
+<style>
+  @font-face {
+      font-family: 'MabinogiClassicR';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/MabinogiClassicR.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  }
+nav{text-align: center; font-size: 35px; font-family: 'MabinogiClassicR';}
+small{font-size: 35px; font-family: 'MabinogiClassicR';}
+.logout{font-size: 35px; font-family: 'MabinogiClassicR';}
+table{margin: auto;}
+td{text-align: center; font-size: 20px; font-family: 'MabinogiClassicR';}
+h1{text-align: center;}
+</style>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인</title>
+  <script th:inline="javascript">
+    const user = [[${session.loginUser}]] // 세션에 있는 데이터를 가져와서 user변수에 저장
+    if(user==null){ // 이것이 null이라면 로그인 안한거
+      alert("관리자 전용입니다."); // 경고메시지
+      location.href="/" // 브라우저의 주소를 /로 강제 세팅
+    }
+  </script>
+</head>
+<body>
+  <section>
+    <header>
+      <a class="logout" href="/admin/logout">로그아웃</a>
+        <center>
+            <a href="/">
+                <img src="https://resources.chimhaha.net/assets/1668258070647-hf2l6s4c2j.svg?v=1679679048000" width="200" height="80" alt="침하하">
+            </a>
+        </center>
+    </header>
+</section>
+<nav>
+ <a href="/music/list">음악</a>
+</nav>
+<hr>
+<footer>
+  <center>
+      <small> Copyrightⓒ게시판 All right reserved. </small> 
+  </center>
+</footer>
+</body>
+<style>
+    @font-face {
+        font-family: 'MabinogiClassicR';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/MabinogiClassicR.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+  nav{text-align: center; font-size: 35px; font-family: 'MabinogiClassicR';}
+  small{font-size: 35px; font-family: 'MabinogiClassicR';}
+  .logout{font-size: 35px; font-family: 'MabinogiClassicR';}
+</style>
+</html>
