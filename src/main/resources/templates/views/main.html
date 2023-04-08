@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인</title>
+</head>
+<body>
+<section>
+<header>
+    <center>
+        <a href="/">
+            <img src="https://resources.chimhaha.net/assets/1668258070647-hf2l6s4c2j.svg?v=1679679048000" width="200" height="80" alt="침하하">
+        </a>
+    </center>
+</header>
+</section>
+<hr>
+<h1></h1>
+<div class="login_box">
+    <form action="/admin/login" method="post">
+        <p>Admin ID</p>
+        <input type="text" name="admin_id" id="admin_id">
+        <p>Password</p>
+        <input type="password" name="admin_pwd" id="admin_pwd">
+        <button id="admin_login">로그인</button> <br>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/admin/add">회원가입</a>
+        <p th:text="${message}"></p>
+    </form>
+    <hr>
+<footer>
+    <center>
+        <small> Copyrightⓒ게시판 All right reserved. </small> 
+    </center>
+    
+</footer>
+</div>
+</body>
+<style scoped>
+.login_wrap {
+    /* background-color:#f1f1f1; */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgb(237, 237, 237) 51%,rgba(255,255,255,1) 100%);
+    width: 100vw; height: 100vh;
+    position: relative;
+}
+.login_box {
+    background: #fff;
+    position: absolute; padding:50px; width:300px;
+    border-radius:5px; left: 50%; top: 50%; margin-left: -200px;
+    margin-top: -280px; box-shadow:0 0 10px rgba(0,0,0,0.05)
+}
+.login_box h1 {
+    font-family: 'Roboto';
+    font-size: 36px; margin-left:-5px;
+    margin-bottom: 20px; color: #333;
+}
+.login_box input {
+    width: 100%;
+    border: 0; border-bottom: 1px solid #ddd; font-size: 20px;
+    padding:5px 10px; box-sizing: border-box; font-weight: 100;
+}
+.login_box button {
+    border: 0; width: 100%; height: 55px; margin-top: 40px;
+    font-size: 16px; font-weight: 300; cursor:pointer;
+    border-radius: 5px; background-color: #434343; color: #fafafa;
+}
+.login_box p {
+    font-size: 22px; font-family: 'Roboto'; font-weight: 300;
+    color: #333; padding:20px 0;
+}
+.login_box p:nth-of-type(2) {
+    margin-top: 20px;
+}
+.login_box p span {
+    font-family: 'Noto Sans KR'; font-size: 14px; font-weight: 300;
+}
+.login_box a {
+    border: 0; width: 100%; height: 55px; margin-top: 40px;
+    font-size: 16px; font-weight: 300; cursor:pointer;
+    border-radius: 5px; background-color: #fff; color: #434343;
+}
+</style>
+</html>
